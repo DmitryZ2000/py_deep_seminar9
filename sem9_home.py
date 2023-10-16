@@ -66,6 +66,6 @@ def find_roots(a:int|float=1, b:int|float=-4, c:int|float=4):
 
 
 if __name__ == '__main__':
-    generate_csv_file('input_data.csv', 50)
+    generate_csv_file('input_data.csv', 5)
     find_roots()
 
