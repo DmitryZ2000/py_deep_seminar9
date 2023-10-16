@@ -50,14 +50,6 @@ def save_to_json(func):
     return wrapper
 
 
-
-# def save_to_json(new_dict, json_file_name:str='results.json'):
-#     with (
-#         open(json_file_name, 'w') as json_file
-#         ):
-#         json.dump(new_dict, json_file, indent=2)
-#     return
-
 @save_to_json
 @get_data_from_csv
 def find_roots(a:int|float=1, b:int|float=-4, c:int|float=4):
