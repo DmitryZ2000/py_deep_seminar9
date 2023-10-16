@@ -1,0 +1,1 @@
+from . import sem9_task1, sem9_task2, sem9_task3
