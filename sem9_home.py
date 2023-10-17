@@ -41,10 +41,11 @@ def get_data_from_csv(func):
 
 def save_to_json(func):
     def wrapper(json_file_name:str='results.json'):
+        new_dict = func()
         with (
             open(json_file_name, 'w') as json_file
             ):
-            new_dict = func() 
+            
             json.dump(new_dict, json_file, indent=2)
         return
     return wrapper
@@ -66,6 +67,6 @@ def find_roots(a:int|float=1, b:int|float=-4, c:int|float=4):
 
 
 if __name__ == '__main__':
-    generate_csv_file('input_data.csv', 5)
+    generate_csv_file('input_data1.csv', 5)
     find_roots()
 
